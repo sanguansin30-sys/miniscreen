@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Miniสกรีน รับสกรีนสินค้า Sublimation คุณภาพพรีเมียม แก้ว เสื้อ กระเป๋า ของชำร่วย ขายส่ง-ขายปลีก ส่งทั่วไทย">
+<meta name="keywords" content="สกรีน sublimation แก้วเซรามิก กระเป๋าผ้า เสื้อสกรีน ของชำร่วย ขายส่ง">
+<title>Miniสกรีน | สกรีนสวย สีคม ส่งทั่วไทย</title>
+<link rel="icon" href="Logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===== CSS VARIABLES ===== */
+  :root {
+    --navy: #1A3A6B;
+    --navy-dark: #122B52;
+    --navy-light: #234d8a;
+    --gold: #C4991F;
+    --gold-light: #d4aa35;
+    --gold-dark: #a07f18;
+    --white: #FFFFFF;
+    --bg: #F8F9FA;
+    --bg2: #EEF1F7;
+    --text: #2C3E50;
+    --text-light: #6c757d;
+    --shadow: 0 4px 20px rgba(26,58,107,0.12);
+    --shadow-hover: 0 8px 30px rgba(26,58,107,0.22);
+    --radius: 12px;
+    --radius-lg: 20px;
+    --transition: all 0.3s ease;
+  }
+
+  /* ===== RESET ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Sarabun', 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ===== NAVBAR ===== */
+  #navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(26,58,107,0.97);
+    backdrop-filter: blur(10px);
+    padding: 0 24px;
+    height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    transition: var(--transition);
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .nav-brand img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
+  .nav-brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .nav-brand-name { color: var(--white); font-size: 1.05rem; font-weight: 700; letter-spacing: 0.3px; }
+  .nav-brand-tag { color: var(--gold); font-size: 0.65rem; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; }
+  .nav-menu { display: flex; align-items: center; gap: 4px; }
+  .nav-menu a {
+    color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 500;
+    padding: 8px 14px; border-radius: 8px;
+    transition: var(--transition);
+    white-space: nowrap;
+  }
+  .nav-menu a:hover { color: var(--gold); background: rgba(196,153,31,0.12); }
+  .nav-cta {
+    background: var(--gold); color: var(--navy) !important;
+    font-weight: 700 !important; padding: 9px 18px !important;
+    border-radius: 25px !important;
+    box-shadow: 0 3px 12px rgba(196,153,31,0.4);
+    transition: var(--transition) !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); box-shadow: 0 5px 18px rgba(196,153,31,0.5) !important; }
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px; cursor: pointer;
+    background: none; border: none; padding: 6px;
+  }
+  .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: var(--transition); }
+  .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  /* ===== HERO ===== */
+  #home {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden; padding-top: 68px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('images/hero-mugs-banner.jpg');
+    background-size: cover; background-position: center;
+    opacity: 0.25;
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    max-width: 1200px; margin: 0 auto; padding: 80px 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  }
+  .hero-text {}
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(196,153,31,0.2); border: 1px solid rgba(196,153,31,0.4);
+    color: var(--gold); padding: 6px 16px; border-radius: 25px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 800; color: var(--white); line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .hero-title span { color: var(--gold); }
+  .hero-subtitle {
+    font-size: 1rem; color: rgba(255,255,255,0.75);
+    font-family: 'Poppins', sans-serif; margin-bottom: 32px;
+    letter-spacing: 0.5px;
+  }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--navy);
+    padding: 14px 28px; border-radius: 30px;
+    font-weight: 700; font-size: 0.95rem;
+    box-shadow: 0 4px 18px rgba(196,153,31,0.45);
+    transition: var(--transition); border: none; cursor: pointer; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 7px 25px rgba(196,153,31,0.55); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    padding: 13px 28px; border-radius: 30px;
+    font-weight: 600; font-size: 0.95rem;
+    border: 2px solid rgba(255,255,255,0.4);
+    transition: var(--transition); cursor: pointer; display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); background: rgba(196,153,31,0.08); }
+  .hero-img {
+    position: relative;
+  }
+  .hero-img-main {
+    border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    aspect-ratio: 4/3;
+  }
+  .hero-img-main img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-img-badge {
+    position: absolute; bottom: -16px; left: -16px;
+    background: var(--gold); color: var(--navy);
+    padding: 14px 20px; border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .hero-img-badge .num { font-size: 1.6rem; font-weight: 800; display: block; line-height: 1; }
+  .hero-img-badge .label { font-size: 0.7rem; font-weight: 600; }
+
+  /* ===== FEATURES ===== */
+  .features-strip {
+    background: var(--white);
+    padding: 48px 24px;
+    box-shadow: var(--shadow);
+  }
+  .features-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  }
+  .feature-card {
+    text-align: center; padding: 28px 16px;
+    border-radius: var(--radius); transition: var(--transition);
+  }
+  .feature-card:hover { background: var(--bg); transform: translateY(-3px); }
+  .feature-icon { font-size: 2.4rem; margin-bottom: 12px; }
+  .feature-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .feature-desc { font-size: 0.85rem; color: var(--text-light); }
+
+  /* ===== SECTION COMMON ===== */
+  section { padding: 80px 24px; }
+  .section-header { text-align: center; margin-bottom: 52px; }
+  .section-tag {
+    display: inline-block;
+    background: rgba(196,153,31,0.12); color: var(--gold-dark);
+    padding: 5px 16px; border-radius: 20px;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-title { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+  .section-sub { font-size: 0.95rem; color: var(--text-light); max-width: 540px; margin: 0 auto; }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  /* ===== PRODUCTS ===== */
+  #products { background: var(--bg); }
+  .products-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px;
+    margin-bottom: 40px;
+  }
+  .product-card {
+    background: var(--white); border-radius: var(--radius-lg);
+    overflow: hidden; box-shadow: var(--shadow);
+    transition: var(--transition); cursor: pointer;
+  }
+  .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+  .product-img {
+    aspect-ratio: 4/3; overflow: hidden; background: var(--bg2);
+    position: relative;
+  }
+  .product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+  .product-card:hover .product-img img { transform: scale(1.07); }
+  .product-img-placeholder {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; background: var(--bg2);
+  }
+  .product-badge {
+    position: absolute; top: 10px; right: 10px;
+    background: var(--navy); color: var(--gold);
+    padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700;
+  }
+  .product-info { padding: 18px; }
+  .product-name { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .product-name-en { font-size: 0.75rem; color: var(--text-light); font-family: 'Poppins', sans-serif; margin-bottom: 10px; }
+  .product-price {
+    font-size: 1.1rem; font-weight: 800; color: var(--gold-dark);
+    display: flex; align-items: baseline; gap: 4px;
+  }
+  .product-price-unit { font-size: 0.75rem; font-weight: 400; color: var(--text-light); }
+  .products-cta { text-align: center; }
+  .btn-line {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #06C755; color: white;
+    padding: 14px 32px; border-radius: 30px;
+    font-weight: 700; font-size: 1rem;
+    box-shadow: 0 4px 18px rgba(6,199,85,0.35);
+    transition: var(--transition);
+  }
+  .btn-line:hover { background: #05b04b; transform: translateY(-2px); box-shadow: 0 7px 25px rgba(6,199,85,0.45); }
+
+  /* ===== WHOLESALE ===== */
+  #wholesale { background: var(--navy); color: var(--white); }
+  #wholesale .section-tag { background: rgba(196,153,31,0.2); color: var(--gold); }
+  #wholesale .section-title { color: var(--white); }
+  #wholesale .section-sub { color: rgba(255,255,255,0.65); }
+  .wholesale-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .price-table {
+    background: rgba(255,255,255,0.06); border-radius: var(--radius-lg);
+    overflow: hidden; border: 1px solid rgba(255,255,255,0.1);
+  }
+  .price-table-header {
+    background: var(--gold); color: var(--navy);
+    padding: 16px 24px;
+    font-size: 1rem; font-weight: 800;
+  }
+  .price-tier {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.07);
+    transition: var(--transition);
+  }
+  .price-tier:last-child { border-bottom: none; }
+  .price-tier:hover { background: rgba(255,255,255,0.05); }
+  .price-tier.best { background: rgba(196,153,31,0.15); }
+  .tier-range { font-size: 0.95rem; color: rgba(255,255,255,0.85); }
+  .tier-price { font-size: 1.2rem; font-weight: 800; color: var(--gold); }
+  .tier-price span { font-size: 0.75rem; font-weight: 400; color: rgba(255,255,255,0.5); }
+  .tier-best { font-size: 0.7rem; font-weight: 700; color: var(--gold); background: rgba(196,153,31,0.2); padding: 3px 8px; border-radius: 10px; }
+  .wholesale-info { display: flex; flex-direction: column; gap: 16px; }
+  .info-card {
+    background: rgba(255,255,255,0.06); border-radius: var(--radius);
+    padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .info-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+  .info-text {}
+  .info-title { font-size: 0.85rem; font-weight: 700; color: var(--gold); margin-bottom: 3px; }
+  .info-desc { font-size: 0.85rem; color: rgba(255,255,255,0.75); }
+
+  /* Payment */
+  .payment-box {
+    margin-top: 48px;
+    background: rgba(255,255,255,0.06); border-radius: var(--radius-lg);
+    border: 1px solid rgba(196,153,31,0.3);
+    padding: 28px 32px;
+  }
+  .payment-title { font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: 16px; }
+  .bank-info {
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(255,255,255,0.05); border-radius: var(--radius);
+    padding: 14px 20px; margin-bottom: 8px;
+  }
+  .bank-name { font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-bottom: 4px; }
+  .bank-number { font-size: 1.5rem; font-weight: 800; color: var(--white); letter-spacing: 2px; }
+  .bank-holder { font-size: 0.8rem; color: var(--gold); }
+  .btn-copy {
+    background: rgba(196,153,31,0.2); color: var(--gold);
+    border: 1px solid rgba(196,153,31,0.4); border-radius: 8px;
+    padding: 8px 14px; font-size: 0.8rem; font-weight: 600;
+    cursor: pointer; transition: var(--transition);
+    white-space: nowrap;
+  }
+  .btn-copy:hover { background: var(--gold); color: var(--navy); }
+
+  /* Steps */
+  .steps { margin-top: 48px; }
+  .steps-title { font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: 20px; text-align: center; }
+  .steps-list {
+    display: flex; gap: 0; position: relative;
+    justify-content: space-between;
+  }
+  .steps-list::before {
+    content: ''; position: absolute;
+    top: 22px; left: calc(10% + 22px); right: calc(10% + 22px);
+    height: 2px; background: rgba(196,153,31,0.3);
+    z-index: 0;
+  }
+  .step {
+    flex: 1; text-align: center; position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .step-num {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--navy-dark); border: 2px solid var(--gold);
+    color: var(--gold); font-weight: 800; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step-text { font-size: 0.78rem; color: rgba(255,255,255,0.75); max-width: 80px; }
+
+  /* Wholesale CTA */
+  .wholesale-cta {
+    text-align: center; margin-top: 48px;
+    padding: 40px; background: rgba(196,153,31,0.1);
+    border-radius: var(--radius-lg); border: 1px solid rgba(196,153,31,0.25);
+  }
+  .wholesale-cta p { color: rgba(255,255,255,0.8); margin-bottom: 20px; font-size: 1rem; }
+  .wholesale-cta strong { color: var(--gold); }
+
+  /* ===== PORTFOLIO ===== */
+  #portfolio { background: var(--bg); }
+  .filter-tabs {
+    display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  .filter-btn {
+    padding: 8px 20px; border-radius: 25px; font-size: 0.85rem; font-weight: 600;
+    border: 2px solid var(--bg2); background: var(--white); color: var(--text-light);
+    cursor: pointer; transition: var(--transition);
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--navy); color: var(--gold); border-color: var(--navy);
+  }
+  .portfolio-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .portfolio-item {
+    border-radius: var(--radius); overflow: hidden;
+    position: relative; cursor: pointer;
+    box-shadow: var(--shadow);
+    aspect-ratio: 4/3;
+  }
+  .portfolio-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .portfolio-item:hover img { transform: scale(1.07); }
+  .portfolio-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(26,58,107,0.85) 0%, transparent 60%);
+    opacity: 0; transition: var(--transition);
+    display: flex; align-items: flex-end; padding: 16px;
+  }
+  .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+  .portfolio-caption { color: var(--white); font-size: 0.85rem; font-weight: 600; }
+  .portfolio-caption small { display: block; color: var(--gold); font-size: 0.75rem; }
+
+  /* Lightbox */
+  #lightbox {
+    display: none; position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  #lightbox.open { display: flex; }
+  #lightbox img { max-width: 90vw; max-height: 85vh; border-radius: var(--radius); object-fit: contain; }
+  #lightbox-close {
+    position: absolute; top: 20px; right: 24px;
+    color: white; font-size: 2rem; cursor: pointer; background: none; border: none;
+    line-height: 1; opacity: 0.8; transition: var(--transition);
+  }
+  #lightbox-close:hover { opacity: 1; transform: scale(1.2); }
+  #lightbox-caption {
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+    color: white; font-size: 0.9rem; text-align: center;
+    background: rgba(0,0,0,0.5); padding: 8px 20px; border-radius: 20px;
+  }
+
+  /* ===== CONTACT ===== */
+  #contact { background: var(--white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+  .contact-info { }
+  .contact-info h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+  .contact-info p { color: var(--text-light); margin-bottom: 28px; font-size: 0.95rem; }
+  .social-links { display: flex; flex-direction: column; gap: 14px; }
+  .social-link {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 18px; border-radius: var(--radius);
+    border: 2px solid var(--bg2); transition: var(--transition);
+    background: var(--bg);
+  }
+  .social-link:hover { border-color: var(--navy); background: var(--navy); color: white; transform: translateX(4px); }
+  .social-link:hover .social-label { color: white; }
+  .social-link:hover .social-sub { color: rgba(255,255,255,0.65); }
+  .social-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+  .social-icon.line { background: #06C755; }
+  .social-icon.fb { background: #1877F2; }
+  .social-icon.shopee { background: #EE4D2D; }
+  .social-text {}
+  .social-label { font-weight: 700; font-size: 0.95rem; color: var(--navy); }
+  .social-sub { font-size: 0.78rem; color: var(--text-light); }
+
+  /* Form */
+  .contact-form { }
+  .form-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 20px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 12px 16px;
+    border: 2px solid var(--bg2); border-radius: var(--radius);
+    font-family: 'Sarabun', sans-serif; font-size: 0.95rem; color: var(--text);
+    background: var(--bg); transition: var(--transition); outline: none;
+    appearance: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--navy); background: white;
+    box-shadow: 0 0 0 3px rgba(26,58,107,0.1);
+  }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .btn-submit {
+    width: 100%; padding: 14px; border-radius: var(--radius);
+    background: var(--navy); color: white; font-weight: 700; font-size: 1rem;
+    border: none; cursor: pointer; transition: var(--transition);
+    font-family: 'Sarabun', sans-serif;
+  }
+  .btn-submit:hover { background: var(--navy-light); transform: translateY(-2px); box-shadow: var(--shadow); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy-dark); color: rgba(255,255,255,0.7);
+    padding: 60px 24px 24px;
+  }
+  .footer-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand { }
+  .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .footer-logo img { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--gold); }
+  .footer-logo-name { color: white; font-size: 1.2rem; font-weight: 800; }
+  .footer-tagline { font-size: 0.85rem; color: var(--gold); margin-bottom: 12px; }
+  .footer-desc { font-size: 0.82rem; line-height: 1.8; }
+  .footer-col h4 { color: var(--gold); font-size: 0.9rem; font-weight: 700; margin-bottom: 14px; letter-spacing: 0.5px; }
+  .footer-links { display: flex; flex-direction: column; gap: 8px; }
+  .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.65); transition: var(--transition); }
+  .footer-links a:hover { color: var(--gold); padding-left: 4px; }
+  .footer-contact-item { font-size: 0.85rem; margin-bottom: 8px; display: flex; gap: 8px; }
+  .footer-contact-item span:first-child { color: var(--gold); flex-shrink: 0; }
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px; text-align: center;
+    font-size: 0.8rem;
+  }
+
+  /* ===== LINE FLOAT BTN ===== */
+  #line-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 900;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #06C755; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(6,199,85,0.5);
+    font-size: 1.8rem; transition: var(--transition);
+    animation: floatPulse 2.5s ease-in-out infinite;
+  }
+  #line-float:hover { transform: scale(1.12); box-shadow: 0 7px 28px rgba(6,199,85,0.6); }
+  @keyframes floatPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(6,199,85,0.5); }
+    50% { box-shadow: 0 4px 35px rgba(6,199,85,0.75); }
+  }
+  .line-float-tooltip {
+    position: fixed; bottom: 34px; right: 90px; z-index: 900;
+    background: #06C755; color: white; padding: 6px 14px; border-radius: 20px;
+    font-size: 0.8rem; font-weight: 700; white-space: nowrap;
+    opacity: 0; pointer-events: none; transition: var(--transition);
+  }
+  #line-float:hover + .line-float-tooltip, .line-float-tooltip:hover { opacity: 1; }
+
+  /* ===== ANIMATIONS ===== */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .hero-content { grid-template-columns: 1fr; text-align: center; }
+    .hero-btns { justify-content: center; }
+    .hero-img { display: none; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .wholesale-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    section { padding: 56px 20px; }
+    .nav-menu { display: none; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); padding: 16px; gap: 4px; }
+    .nav-menu.open { display: flex; }
+    .nav-menu a { padding: 12px 16px; border-radius: 8px; }
+    .hamburger { display: flex; }
+    .features-grid { grid-template-columns: 1fr 1fr; }
+    .steps-list { flex-direction: column; gap: 12px; }
+    .steps-list::before { display: none; }
+    .step { flex-direction: row; text-align: left; gap: 14px; }
+    .step-text { max-width: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .features-grid { grid-template-columns: 1fr 1fr; }
+    .products-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#home" class="nav-brand">
+    <img src="Logo.png" alt="Miniสกรีน Logo" onerror="this.style.display='none'">
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">Miniสกรีน</span>
+      <span class="nav-brand-tag">Sublimation Printing</span>
+    </div>
+  </a>
+  <div class="nav-menu" id="navMenu">
+    <a href="#home">หน้าแรก</a>
+    <a href="#products">สินค้า</a>
+    <a href="#wholesale">ขายส่ง</a>
+    <a href="#portfolio">ผลงาน</a>
+    <a href="#contact">ติดต่อ</a>
+    <a href="https://lin.ee/83Ahiu6" target="_blank" class="nav-cta">💬 ทัก LINE</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="เมนู">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">✨ Premium Sublimation Printing</div>
+      <h1 class="hero-title">สกรีนสวย สีคม<br><span>ส่งทั่วไทย</span></h1>
+      <p class="hero-subtitle">Premium Sublimation Printing · Wholesale &amp; Retail · Shipped Nationwide</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-primary">🛒 ดูสินค้าทั้งหมด</a>
+        <a href="#wholesale" class="btn-outline">📦 ติดต่อขายส่ง</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="hero-img-main">
+        <img src="images/mug-ceramic-lifestyle.jpg" alt="แก้วเซรามิกสกรีน Sublimation" loading="lazy">
+      </div>
+      <div class="hero-img-badge">
+        <span class="num">12+</span>
+        <span class="label">ชิ้น / MOQ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<div class="features-strip">
+  <div class="features-grid">
+    <div class="feature-card fade-up">
+      <div class="feature-icon">🏆</div>
+      <div class="feature-title">คุณภาพระดับพรีเมียม</div>
+      <div class="feature-desc">สีซึมเข้าเนื้อ ไม่ลอก ไม่ซีด ทนทานยาวนาน</div>
+    </div>
+    <div class="feature-card fade-up">
+      <div class="feature-icon">💰</div>
+      <div class="feature-title">ราคาขายส่ง</div>
+      <div class="feature-desc">เริ่มต้นเพียง 12 ชิ้น ราคาดีตั้งแต่ออเดอร์แรก</div>
+    </div>
+    <div class="feature-card fade-up">
+      <div class="feature-icon">🚚</div>
+      <div class="feature-title">ส่งไว ทั่วไทย</div>
+      <div class="feature-desc">3–7 วันทำการ ขนส่งเอกชน มีเลข Tracking</div>
+    </div>
+    <div class="feature-card fade-up">
+      <div class="feature-icon">🎨</div>
+      <div class="feature-title">ออกแบบฟรี</div>
+      <div class="feature-desc">ดู Mock-up ก่อนพิมพ์จริง ไม่ต้องเสียค่าออกแบบ</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Our Products</span>
+      <h2 class="section-title">สินค้าของเรา</h2>
+      <p class="section-sub">สินค้าสกรีน Sublimation หลากหลายชนิด คุณภาพสูง ราคาขายส่งสุดคุ้ม</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <img src="images/mug-ceramic-lifestyle.jpg" alt="แก้วเซรามิก 11 oz" loading="lazy">
+          <div class="product-badge">BESTSELLER</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">แก้วเซรามิก 11 oz</div>
+          <div class="product-name-en">Ceramic Mug 11 oz</div>
+          <div class="product-price">75–80 <span class="product-price-unit">บาท/ใบ</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <img src="images/bag-collection-full.jpg" alt="กระเป๋าผ้า" loading="lazy">
+        </div>
+        <div class="product-info">
+          <div class="product-name">กระเป๋าผ้า 30×40 cm</div>
+          <div class="product-name-en">Tote Bag 30×40 cm</div>
+          <div class="product-price">55 <span class="product-price-unit">บาท/ใบ</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <img src="images/mousepad-elephant-thai.jpg" alt="แผ่นรองเม้าส์" loading="lazy">
+        </div>
+        <div class="product-info">
+          <div class="product-name">แผ่นรองเม้าส์</div>
+          <div class="product-name-en">Mousepad</div>
+          <div class="product-price">65 <span class="product-price-unit">บาท/ชิ้น</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <div class="product-img-placeholder">👕</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">เสื้อผู้ใหญ่ / เสื้อกล้าม</div>
+          <div class="product-name-en">Adult T-Shirt / Tank Top</div>
+          <div class="product-price">75 <span class="product-price-unit">บาท/ตัว</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <div class="product-img-placeholder">👚</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">เสื้อเด็ก S/M/L</div>
+          <div class="product-name-en">Kids T-Shirt S/M/L</div>
+          <div class="product-price">55 <span class="product-price-unit">บาท/ตัว</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <div class="product-img-placeholder">👚</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">เสื้อเด็ก XL/XXL</div>
+          <div class="product-name-en">Kids T-Shirt XL/XXL</div>
+          <div class="product-price">60 <span class="product-price-unit">บาท/ตัว</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <img src="images/mug-frosted-elephant.jpg" alt="แผ่นรองแก้ว ใหญ่" loading="lazy">
+        </div>
+        <div class="product-info">
+          <div class="product-name">แผ่นรองแก้ว ใหญ่</div>
+          <div class="product-name-en">Large Coaster</div>
+          <div class="product-price">30 <span class="product-price-unit">บาท/ชิ้น</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <div class="product-img-placeholder">🧲</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">แม่เหล็กตู้เย็น ใหญ่</div>
+          <div class="product-name-en">Large Fridge Magnet</div>
+          <div class="product-price">18 <span class="product-price-unit">บาท/ชิ้น</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <div class="product-img-placeholder">🧲</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">แม่เหล็กตู้เย็น เล็ก</div>
+          <div class="product-name-en">Small Fridge Magnet</div>
+          <div class="product-price">15 <span class="product-price-unit">บาท/ชิ้น</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <div class="product-img-placeholder">🧩</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">จิ๊กซอ</div>
+          <div class="product-name-en">Photo Puzzle</div>
+          <div class="product-price">50 <span class="product-price-unit">บาท/ชิ้น</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <div class="product-img-placeholder">🫗</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">แผ่นรองแก้ว เล็ก</div>
+          <div class="product-name-en">Small Coaster</div>
+          <div class="product-price">25 <span class="product-price-unit">บาท/ชิ้น</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <div class="product-img-placeholder">👚</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">เสื้อเด็กสี</div>
+          <div class="product-name-en">Coloured Kids Shirt</div>
+          <div class="product-price">55 <span class="product-price-unit">บาท/ตัว</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="products-cta fade-up">
+      <a href="https://lin.ee/83Ahiu6" target="_blank" class="btn-line">
+        💬 สอบถามราคาขายส่ง → LINE @388omvfa
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHOLESALE -->
+<section id="wholesale">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Wholesale</span>
+      <h2 class="section-title">ราคาขายส่ง — โปร่งใส ไม่มีซ่อนเร้น</h2>
+      <p class="section-sub">Transparent wholesale pricing · No hidden fees · MOQ only 12 pieces</p>
+    </div>
+    <div class="wholesale-grid">
+      <div class="fade-up">
+        <div class="price-table">
+          <div class="price-table-header">🏺 แก้วเซรามิก 11 oz — ตาราง Tier ราคา</div>
+          <div class="price-tier">
+            <div>
+              <div class="tier-range">12–49 ใบ</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.5)">เริ่มต้นง่าย</div>
+            </div>
+            <div class="tier-price">75 <span>บาท/ใบ</span></div>
+          </div>
+          <div class="price-tier">
+            <div>
+              <div class="tier-range">50–99 ใบ</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.5)">ราคาดีขึ้น</div>
+            </div>
+            <div class="tier-price">70 <span>บาท/ใบ</span></div>
+          </div>
+          <div class="price-tier best">
+            <div>
+              <div class="tier-range">100+ ใบ</div>
+              <div style="font-size:0.75rem;color:var(--gold)">ประหยัดสุด</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div class="tier-price">65 <span>บาท/ใบ</span></div>
+              <div class="tier-best">⭐ แนะนำ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wholesale-info fade-up">
+        <div class="info-card">
+          <div class="info-icon">📦</div>
+          <div class="info-text">
+            <div class="info-title">MOQ — ขั้นต่ำสุด</div>
+            <div class="info-desc">เริ่มต้นเพียง <strong style="color:var(--gold)">12 ชิ้น</strong> · Minimum order: 12 pieces only</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🕐</div>
+          <div class="info-text">
+            <div class="info-title">ระยะเวลาผลิต</div>
+            <div class="info-desc">12–50 ชิ้น → <strong style="color:var(--gold)">3–4 วันทำการ</strong><br>มากกว่า 50 ชิ้น → <strong style="color:var(--gold)">~7 วันทำการ</strong></div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🚚</div>
+          <div class="info-text">
+            <div class="info-title">ค่าจัดส่ง</div>
+            <div class="info-desc">คิดตามจริง ขนส่งเอกชน มีเลข Tracking แจ้งทุกออเดอร์</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🎨</div>
+          <div class="info-text">
+            <div class="info-title">ออกแบบฟรี + Mock-up</div>
+            <div class="info-desc">ดู Mock-up ก่อนพิมพ์จริง ไม่มีค่าออกแบบ แก้ไขได้ไม่จำกัด</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="payment-box fade-up">
+      <div class="payment-title">💳 วิธีชำระเงิน / Payment Method</div>
+      <div class="bank-info">
+        <div>
+          <div class="bank-name">🏦 ธนาคารกรุงไทย (Krungthai Bank)</div>
+          <div class="bank-number" id="bankNum">4030958028</div>
+          <div class="bank-holder">การะเกด แซ่จาง</div>
+        </div>
+        <button class="btn-copy" onclick="copyBank()">📋 คัดลอก</button>
+      </div>
+      <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-top:8px">* ชำระมัดจำ 50% ก่อนเริ่มผลิต — ส่วนที่เหลือเมื่อสินค้าพร้อม</p>
+    </div>
+
+    <!-- STEPS -->
+    <div class="steps fade-up">
+      <div class="steps-title">📋 ขั้นตอนสั่งสินค้า / How to Order</div>
+      <div class="steps-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">แจ้งรายการ &amp; จำนวน</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">ยืนยันราคา &amp; แบบ</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">โอนมัดจำ</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text">ผลิต &amp; ตรวจสอบ</div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-text">จัดส่ง + Tracking</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHOLESALE CTA -->
+    <div class="wholesale-cta fade-up">
+      <p>พร้อมสั่งแล้ว? ทักมาหาเราได้เลยครับ<br><strong>ตอบไว · ดูแลดี · ส่งตรงเวลา</strong></p>
+      <a href="https://lin.ee/83Ahiu6" target="_blank" class="btn-primary" style="font-size:1.05rem;padding:16px 36px">
+        💬 ทัก LINE @388omvfa เพื่อขอใบเสนอราคา
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">ผลงานของเรา</h2>
+      <p class="section-sub">ตัวอย่างผลงานจริง ส่งลูกค้าทั่วไทย — สีสวย คมชัด ทุกชิ้น</p>
+    </div>
+    <div class="filter-tabs fade-up">
+      <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+      <button class="filter-btn" data-filter="mug">🏺 แก้ว</button>
+      <button class="filter-btn" data-filter="bag">👜 กระเป๋า</button>
+      <button class="filter-btn" data-filter="other">✨ อื่นๆ</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid">
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="ออเดอร์แก้วเซรามิก — แถวยาว" data-sub="Ceramic Mug Batch Order">
+        <img src="images/portfolio-mugs-row.jpg" alt="ออเดอร์แก้วเซรามิก" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">ออเดอร์แก้วเซรามิก<small>Ceramic Mug Batch</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="แก้วเซรามิก — จัดแสดง" data-sub="Ceramic Mug Display">
+        <img src="images/portfolio-mugs-display.jpg" alt="แก้วเซรามิกจัดแสดง" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">แก้วเซรามิกสกรีน<small>Custom Ceramic Mug</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="ใกล้ชิด — งานละเอียด" data-sub="Mug Close-up Quality">
+        <img src="images/portfolio-mugs-closeup.jpg" alt="แก้วเซรามิกใกล้ชิด" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">คุณภาพงานใกล้ชิด<small>Close-up Quality Check</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="ออเดอร์จำนวนมาก" data-sub="Large Batch Production">
+        <img src="images/portfolio-order-batch.jpg" alt="ออเดอร์จำนวนมาก" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">ออเดอร์จำนวนมาก<small>Large Batch Production</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="แก้วบรรจุกล่อง" data-sub="Mugs Packed & Ready">
+        <img src="images/portfolio-mugs-packed.jpg" alt="แก้วบรรจุกล่อง" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">บรรจุกล่อง พร้อมส่ง<small>Packed & Ready to Ship</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="กล่องออเดอร์พร้อมส่ง" data-sub="Orders Ready for Shipping">
+        <img src="images/portfolio-boxes-order.jpg" alt="กล่องออเดอร์" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">ออเดอร์พร้อมส่ง<small>Orders Ready for Shipping</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="bag" data-caption="กระเป๋าผ้า Workshop" data-sub="Tote Bag Production">
+        <img src="images/portfolio-bags-workshop.jpg" alt="กระเป๋าผ้า workshop" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">กระเป๋าผ้าสกรีน<small>Sublimation Tote Bag</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="bag" data-caption="กระเป๋าผ้า — จัดแสดง" data-sub="Tote Bag Display">
+        <img src="images/portfolio-bags-display.jpg" alt="กระเป๋าผ้าจัดแสดง" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">กระเป๋าผ้า Display<small>Tote Bag Collection</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="other" data-caption="แผ่นรองเม้าส์ลายไทย" data-sub="Thai Pattern Mousepad">
+        <img src="images/mousepad-elephant-thai.jpg" alt="แผ่นรองเม้าส์" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">แผ่นรองเม้าส์<small>Custom Mousepad</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-tag">Contact</span>
+      <h2 class="section-title">ติดต่อเรา</h2>
+      <p class="section-sub">พร้อมตอบทุกคำถาม ทักมาได้เลย ไม่มีขั้นต่ำในการสอบถาม</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <h3>Miniสกรีน</h3>
+        <p>รับสกรีนสินค้า Sublimation ทุกชนิด<br>ขายส่ง-ขายปลีก · ส่งทั่วไทย</p>
+        <div class="social-links">
+          <a href="https://lin.ee/83Ahiu6" target="_blank" class="social-link">
+            <div class="social-icon line">💬</div>
+            <div class="social-text">
+              <div class="social-label">LINE Official Account</div>
+              <div class="social-sub">@388omvfa · ตอบไวที่สุด</div>
+            </div>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=1076827058836993" target="_blank" class="social-link">
+            <div class="social-icon fb">📘</div>
+            <div class="social-text">
+              <div class="social-label">Facebook Page</div>
+              <div class="social-sub">มินิสกรีน · ขายส่ง ขายปลีก</div>
+            </div>
+          </a>
+          <a href="https://shopee.co.th/lalamun_kunfak" target="_blank" class="social-link">
+            <div class="social-icon shopee">🛒</div>
+            <div class="social-text">
+              <div class="social-label">Shopee</div>
+              <div class="social-sub">shopee.co.th/lalamun_kunfak</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form fade-up">
+        <div class="form-title">📝 ส่งข้อความหาเรา / Send Enquiry</div>
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>ชื่อ / Name *</label>
+              <input type="text" name="name" placeholder="ชื่อของคุณ" required>
+            </div>
+            <div class="form-group">
+              <label>เบอร์โทร / Phone *</label>
+              <input type="tel" name="phone" placeholder="08X-XXX-XXXX" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>สินค้าที่สนใจ / Product</label>
+            <select name="product">
+              <option value="">เลือกสินค้า...</option>
+              <option>แก้วเซรามิก 11 oz</option>
+              <option>กระเป๋าผ้า 30×40 cm</option>
+              <option>เสื้อผู้ใหญ่ / เสื้อกล้าม</option>
+              <option>เสื้อเด็ก</option>
+              <option>แผ่นรองเม้าส์</option>
+              <option>แม่เหล็กตู้เย็น</option>
+              <option>แผ่นรองแก้ว</option>
+              <option>จิ๊กซอ</option>
+              <option>อื่นๆ / Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>จำนวน / Quantity</label>
+            <input type="number" name="qty" placeholder="จำนวนชิ้น (ขั้นต่ำ 12 ชิ้น)" min="12">
+          </div>
+          <div class="form-group">
+            <label>ข้อความ / Message</label>
+            <textarea name="message" placeholder="รายละเอียดเพิ่มเติม เช่น แบบที่ต้องการ, เวลาที่ต้องการ..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">💬 ส่งข้อมูล → LINE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="Logo.png" alt="Miniสกรีน Logo" onerror="this.style.display='none'">
+        <span class="footer-logo-name">Miniสกรีน</span>
+      </div>
+      <div class="footer-tagline">สกรีนสวย สีคม ส่งทั่วไทย</div>
+      <div class="footer-desc">รับสกรีนสินค้า Sublimation ทุกชนิด คุณภาพระดับพรีเมียม<br>ขายส่ง-ขายปลีก · MOQ 12 ชิ้น · ส่งทั่วไทย</div>
+    </div>
+    <div class="footer-col">
+      <h4>เมนู / Navigation</h4>
+      <div class="footer-links">
+        <a href="#home">หน้าแรก</a>
+        <a href="#products">สินค้า</a>
+        <a href="#wholesale">ขายส่ง</a>
+        <a href="#portfolio">ผลงาน</a>
+        <a href="#contact">ติดต่อ</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>ติดต่อ / Contact</h4>
+      <div class="footer-contact-item"><span>💬</span><span>LINE: @388omvfa</span></div>
+      <div class="footer-contact-item"><span>🏦</span><span>กรุงไทย: 4030958028<br>การะเกด แซ่จาง</span></div>
+      <div class="footer-contact-item"><span>📦</span><span>MOQ: 12 ชิ้น</span></div>
+      <div class="footer-contact-item"><span>🚚</span><span>ส่งทั่วไทย 3–7 วัน</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2569 Miniสกรีน. All rights reserved. | Premium Sublimation Printing · Shipped Nationwide</p>
+  </div>
+</footer>
+
+<!-- LINE FLOAT -->
+<a href="https://lin.ee/83Ahiu6" target="_blank" id="line-float" title="ทัก LINE">💬</a>
+<div class="line-float-tooltip">ทัก LINE เดี๋ยวนี้</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-caption"></div>
+</div>
+
+<script>
+  // HAMBURGER
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('open');
+  });
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('open');
+    });
+  });
+
+  // SCROLL ANIMATIONS
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  // PORTFOLIO FILTER
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.portfolio-item').forEach(item => {
+        const show = filter === 'all' || item.dataset.cat === filter;
+        item.style.display = show ? 'block' : 'none';
+      });
+    });
+  });
+
+  // LIGHTBOX
+  document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (!img) return;
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-caption').textContent =
+        (item.dataset.caption || '') + (item.dataset.sub ? ' — ' + item.dataset.sub : '');
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('lightbox').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+  // COPY BANK NUMBER
+  function copyBank() {
+    const num = document.getElementById('bankNum').textContent;
+    navigator.clipboard.writeText(num).then(() => {
+      const btn = document.querySelector('.btn-copy');
+      btn.textContent = '✅ คัดลอกแล้ว!';
+      setTimeout(() => { btn.textContent = '📋 คัดลอก'; }, 2000);
+    });
+  }
+
+  // CONTACT FORM → LINE
+  function submitForm(e) {
+    e.preventDefault();
+    const f = e.target;
+    const name = f.name.value;
+    const phone = f.phone.value;
+    const product = f.product.value;
+    const qty = f.qty.value;
+    const msg = f.message.value;
+    const text = `สวัสดีครับ ต้องการสอบถามสินค้า Miniสกรีน\nชื่อ: ${name}\nเบอร์: ${phone}\nสินค้า: ${product || '-'}\nจำนวน: ${qty || '-'} ชิ้น\nข้อความ: ${msg || '-'}`;
+    window.open('https://line.me/R/oaMessage/%40388omvfa?' + encodeURIComponent(text), '_blank');
+  }
+
+  // ACTIVE NAV HIGHLIGHT
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+    document.querySelectorAll('.nav-menu a').forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
