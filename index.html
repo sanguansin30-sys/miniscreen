@@ -9,7 +9,9 @@
 <link rel="icon" href="Logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- โหลด Google Fonts แบบ async — ไม่บล็อกการ render -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <style>
   /* ===== CSS VARIABLES ===== */
   :root {
@@ -35,9 +37,9 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: 'Sarabun', 'Poppins', sans-serif;
-    color: var(--text);
-    background: var(--bg);
+    font-family: 'Sarabun', 'Poppins', 'Leelawadee UI', 'Tahoma', sans-serif;
+    color: #2C3E50;
+    background: #F8F9FA;
     overflow-x: hidden;
     line-height: 1.7;
   }
@@ -91,15 +93,17 @@
   /* ===== HERO ===== */
   #home {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+    background-color: #1A3A6B;
+    background: linear-gradient(135deg, #122B52 0%, #1A3A6B 50%, #234d8a 100%);
     display: flex; align-items: center;
-    position: relative; overflow: hidden; padding-top: 68px;
+    position: relative; overflow: hidden;
+    padding: 68px 0 0 0 !important; /* override section rule */
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background-image: url('images/hero-mugs-banner.jpg');
+    background-image: url('images/hero-mugs-collection.jpg');
     background-size: cover; background-position: center;
-    opacity: 0.25;
+    opacity: 0.28;
   }
   .hero-content {
     position: relative; z-index: 1;
@@ -146,11 +150,12 @@
     position: relative;
   }
   .hero-img-main {
-    border-radius: var(--radius-lg); overflow: hidden;
+    border-radius: 20px; overflow: hidden;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     aspect-ratio: 4/3;
+    background: #234d8a;
   }
-  .hero-img-main img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-img-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .hero-img-badge {
     position: absolute; bottom: -16px; left: -16px;
     background: var(--gold); color: var(--navy);
@@ -576,7 +581,7 @@
     </div>
     <div class="hero-img">
       <div class="hero-img-main">
-        <img src="images/mug-ceramic-lifestyle.jpg" alt="แก้วเซรามิกสกรีน Sublimation" loading="lazy">
+        <img src="images/hero-mugs-collection.jpg" alt="แก้วเซรามิกสกรีน Sublimation" loading="eager">
       </div>
       <div class="hero-img-badge">
         <span class="num">12+</span>
@@ -623,7 +628,7 @@
     <div class="products-grid">
       <div class="product-card fade-up">
         <div class="product-img">
-          <img src="images/mug-ceramic-lifestyle.jpg" alt="แก้วเซรามิก 11 oz" loading="lazy">
+          <img src="images/mug-ceramic-thai-doodle.jpg" alt="แก้วเซรามิก 11 oz" loading="lazy">
           <div class="product-badge">BESTSELLER</div>
         </div>
         <div class="product-info">
@@ -634,7 +639,18 @@
       </div>
       <div class="product-card fade-up">
         <div class="product-img">
-          <img src="images/bag-collection-full.jpg" alt="กระเป๋าผ้า" loading="lazy">
+          <img src="images/mug-frosted-elephant.jpg" alt="แก้วขุ่น Frosted Mug" loading="lazy">
+          <div class="product-badge">NEW</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">แก้วขุ่น Frosted</div>
+          <div class="product-name-en">Frosted Glass Mug</div>
+          <div class="product-price">75–80 <span class="product-price-unit">บาท/ใบ</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <img src="images/bag-bangkok-product.jpg" alt="กระเป๋าผ้า" loading="lazy" style="object-fit:contain;background:#f5f5f5">
         </div>
         <div class="product-info">
           <div class="product-name">กระเป๋าผ้า 30×40 cm</div>
@@ -644,17 +660,7 @@
       </div>
       <div class="product-card fade-up">
         <div class="product-img">
-          <img src="images/mousepad-elephant-thai.jpg" alt="แผ่นรองเม้าส์" loading="lazy">
-        </div>
-        <div class="product-info">
-          <div class="product-name">แผ่นรองเม้าส์</div>
-          <div class="product-name-en">Mousepad</div>
-          <div class="product-price">65 <span class="product-price-unit">บาท/ชิ้น</span></div>
-        </div>
-      </div>
-      <div class="product-card fade-up">
-        <div class="product-img">
-          <div class="product-img-placeholder">👕</div>
+          <img src="images/shirt-model-bangkok.jpg" alt="เสื้อผู้ใหญ่สกรีน" loading="lazy" style="object-fit:contain;background:#f5f5f5">
         </div>
         <div class="product-info">
           <div class="product-name">เสื้อผู้ใหญ่ / เสื้อกล้าม</div>
@@ -664,7 +670,7 @@
       </div>
       <div class="product-card fade-up">
         <div class="product-img">
-          <div class="product-img-placeholder">👚</div>
+          <img src="images/kids-shirt-1.jpg" alt="เสื้อเด็กสกรีน" loading="lazy" style="object-fit:contain;background:#f5f5f5">
         </div>
         <div class="product-info">
           <div class="product-name">เสื้อเด็ก S/M/L</div>
@@ -674,7 +680,7 @@
       </div>
       <div class="product-card fade-up">
         <div class="product-img">
-          <div class="product-img-placeholder">👚</div>
+          <img src="images/kids-shirt-2.jpg" alt="เสื้อเด็กสกรีน XL" loading="lazy" style="object-fit:contain;background:#f5f5f5">
         </div>
         <div class="product-info">
           <div class="product-name">เสื้อเด็ก XL/XXL</div>
@@ -684,7 +690,17 @@
       </div>
       <div class="product-card fade-up">
         <div class="product-img">
-          <img src="images/mug-frosted-elephant.jpg" alt="แผ่นรองแก้ว ใหญ่" loading="lazy">
+          <img src="images/mousepad-bangkok.jpg" alt="แผ่นรองเม้าส์" loading="lazy" style="object-fit:contain;background:#f5f5f5">
+        </div>
+        <div class="product-info">
+          <div class="product-name">แผ่นรองเม้าส์</div>
+          <div class="product-name-en">Mousepad</div>
+          <div class="product-price">65 <span class="product-price-unit">บาท/ชิ้น</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <img src="images/coaster-thailand.jpg" alt="แผ่นรองแก้ว ใหญ่" loading="lazy" style="object-fit:contain;background:#f5f5f5">
         </div>
         <div class="product-info">
           <div class="product-name">แผ่นรองแก้ว ใหญ่</div>
@@ -694,37 +710,7 @@
       </div>
       <div class="product-card fade-up">
         <div class="product-img">
-          <div class="product-img-placeholder">🧲</div>
-        </div>
-        <div class="product-info">
-          <div class="product-name">แม่เหล็กตู้เย็น ใหญ่</div>
-          <div class="product-name-en">Large Fridge Magnet</div>
-          <div class="product-price">18 <span class="product-price-unit">บาท/ชิ้น</span></div>
-        </div>
-      </div>
-      <div class="product-card fade-up">
-        <div class="product-img">
-          <div class="product-img-placeholder">🧲</div>
-        </div>
-        <div class="product-info">
-          <div class="product-name">แม่เหล็กตู้เย็น เล็ก</div>
-          <div class="product-name-en">Small Fridge Magnet</div>
-          <div class="product-price">15 <span class="product-price-unit">บาท/ชิ้น</span></div>
-        </div>
-      </div>
-      <div class="product-card fade-up">
-        <div class="product-img">
-          <div class="product-img-placeholder">🧩</div>
-        </div>
-        <div class="product-info">
-          <div class="product-name">จิ๊กซอ</div>
-          <div class="product-name-en">Photo Puzzle</div>
-          <div class="product-price">50 <span class="product-price-unit">บาท/ชิ้น</span></div>
-        </div>
-      </div>
-      <div class="product-card fade-up">
-        <div class="product-img">
-          <div class="product-img-placeholder">🫗</div>
+          <img src="images/coaster-2.jpg" alt="แผ่นรองแก้ว เล็ก" loading="lazy" style="object-fit:contain;background:#f5f5f5">
         </div>
         <div class="product-info">
           <div class="product-name">แผ่นรองแก้ว เล็ก</div>
@@ -734,12 +720,32 @@
       </div>
       <div class="product-card fade-up">
         <div class="product-img">
-          <div class="product-img-placeholder">👚</div>
+          <img src="images/magnet-yantra.jpg" alt="แม่เหล็กตู้เย็น" loading="lazy" style="object-fit:contain;background:#111">
         </div>
         <div class="product-info">
-          <div class="product-name">เสื้อเด็กสี</div>
-          <div class="product-name-en">Coloured Kids Shirt</div>
-          <div class="product-price">55 <span class="product-price-unit">บาท/ตัว</span></div>
+          <div class="product-name">แม่เหล็กตู้เย็น ใหญ่</div>
+          <div class="product-name-en">Large Fridge Magnet</div>
+          <div class="product-price">18 <span class="product-price-unit">บาท/ชิ้น</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <img src="images/magnet-2.jpg" alt="แม่เหล็กตู้เย็น เล็ก" loading="lazy" style="object-fit:contain;background:#111">
+        </div>
+        <div class="product-info">
+          <div class="product-name">แม่เหล็กตู้เย็น เล็ก</div>
+          <div class="product-name-en">Small Fridge Magnet</div>
+          <div class="product-price">15 <span class="product-price-unit">บาท/ชิ้น</span></div>
+        </div>
+      </div>
+      <div class="product-card fade-up">
+        <div class="product-img">
+          <img src="images/bag-photoroom-1.jpg" alt="กระเป๋าสกรีน" loading="lazy" style="object-fit:contain;background:#f5f5f5">
+        </div>
+        <div class="product-info">
+          <div class="product-name">จิ๊กซอ</div>
+          <div class="product-name-en">Photo Puzzle</div>
+          <div class="product-price">50 <span class="product-price-unit">บาท/ชิ้น</span></div>
         </div>
       </div>
     </div>
@@ -886,42 +892,55 @@
       <button class="filter-btn" data-filter="bag">👜 กระเป๋า</button>
       <button class="filter-btn" data-filter="other">✨ อื่นๆ</button>
     </div>
+    <p style="text-align:center;color:var(--text-light);font-size:0.82rem;margin-bottom:24px;margin-top:-16px">คลิกที่รูปเพื่อดูขยาย · Click image to enlarge</p>
     <div class="portfolio-grid" id="portfolioGrid">
-      <div class="portfolio-item fade-up" data-cat="mug" data-caption="ออเดอร์แก้วเซรามิก — แถวยาว" data-sub="Ceramic Mug Batch Order">
-        <img src="images/portfolio-mugs-row.jpg" alt="ออเดอร์แก้วเซรามิก" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-caption">ออเดอร์แก้วเซรามิก<small>Ceramic Mug Batch</small></div></div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="รวมแก้วเซรามิก หลายลาย" data-sub="Ceramic Mug Collection">
+        <img src="images/hero-mugs-collection.jpg" alt="รวมแก้วเซรามิกสกรีน" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">Collection แก้วสุดฮิต<small>Ceramic Mug Collection</small></div></div>
       </div>
-      <div class="portfolio-item fade-up" data-cat="mug" data-caption="แก้วเซรามิก — จัดแสดง" data-sub="Ceramic Mug Display">
-        <img src="images/portfolio-mugs-display.jpg" alt="แก้วเซรามิกจัดแสดง" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-caption">แก้วเซรามิกสกรีน<small>Custom Ceramic Mug</small></div></div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="แก้วเซรามิก ลาย Thai Doodle" data-sub="Thai Doodle Ceramic Mug">
+        <img src="images/mug-ceramic-thai-doodle.jpg" alt="แก้วเซรามิกลายไทย" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">แก้วลาย Thai Doodle<small>Custom Ceramic Mug</small></div></div>
       </div>
-      <div class="portfolio-item fade-up" data-cat="mug" data-caption="ใกล้ชิด — งานละเอียด" data-sub="Mug Close-up Quality">
-        <img src="images/portfolio-mugs-closeup.jpg" alt="แก้วเซรามิกใกล้ชิด" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-caption">คุณภาพงานใกล้ชิด<small>Close-up Quality Check</small></div></div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="แก้วขุ่น ลาย Thailand ช้าง" data-sub="Frosted Elephant Thailand Mug">
+        <img src="images/mug-frosted-elephant.jpg" alt="แก้วขุ่นลายช้าง" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">แก้วขุ่น Frosted<small>Thailand Elephant Design</small></div></div>
       </div>
-      <div class="portfolio-item fade-up" data-cat="mug" data-caption="ออเดอร์จำนวนมาก" data-sub="Large Batch Production">
-        <img src="images/portfolio-order-batch.jpg" alt="ออเดอร์จำนวนมาก" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-caption">ออเดอร์จำนวนมาก<small>Large Batch Production</small></div></div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="แก้วเซรามิก ลายยันต์ไทย" data-sub="Thai Yantra Pattern Mug">
+        <img src="images/mug-ceramic-yantra.jpg" alt="แก้วเซรามิกลายยันต์" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">แก้วลายยันต์ไทย<small>Thai Pattern Mug</small></div></div>
       </div>
-      <div class="portfolio-item fade-up" data-cat="mug" data-caption="แก้วบรรจุกล่อง" data-sub="Mugs Packed & Ready">
-        <img src="images/portfolio-mugs-packed.jpg" alt="แก้วบรรจุกล่อง" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-caption">บรรจุกล่อง พร้อมส่ง<small>Packed & Ready to Ship</small></div></div>
+      <div class="portfolio-item fade-up" data-cat="mug" data-caption="ออเดอร์แก้วจำนวนมาก — เรียงแถว" data-sub="Large Mug Batch Production">
+        <img src="images/mug-production-batch.jpg" alt="ออเดอร์แก้วจำนวนมาก" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-caption">ออเดอร์จำนวนมาก<small>Batch Production Ready</small></div></div>
       </div>
-      <div class="portfolio-item fade-up" data-cat="mug" data-caption="กล่องออเดอร์พร้อมส่ง" data-sub="Orders Ready for Shipping">
-        <img src="images/portfolio-boxes-order.jpg" alt="กล่องออเดอร์" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-caption">ออเดอร์พร้อมส่ง<small>Orders Ready for Shipping</small></div></div>
+      <div class="portfolio-item fade-up" data-cat="bag" data-caption="กระเป๋าผ้า ลาย Bangkok" data-sub="Bangkok Tote Bag">
+        <img src="images/bag-bangkok-product.jpg" alt="กระเป๋าผ้าลาย Bangkok" loading="lazy" style="object-fit:contain;background:#f5f5f5">
+        <div class="portfolio-overlay"><div class="portfolio-caption">กระเป๋าลาย Bangkok<small>Sublimation Tote Bag</small></div></div>
       </div>
-      <div class="portfolio-item fade-up" data-cat="bag" data-caption="กระเป๋าผ้า Workshop" data-sub="Tote Bag Production">
-        <img src="images/portfolio-bags-workshop.jpg" alt="กระเป๋าผ้า workshop" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-caption">กระเป๋าผ้าสกรีน<small>Sublimation Tote Bag</small></div></div>
+      <div class="portfolio-item fade-up" data-cat="bag" data-caption="กระเป๋าผ้าสกรีน ลายต่างๆ" data-sub="Custom Tote Bag Collection">
+        <img src="images/bag-product-2.jpg" alt="กระเป๋าผ้าสกรีน" loading="lazy" style="object-fit:contain;background:#f5f5f5">
+        <div class="portfolio-overlay"><div class="portfolio-caption">กระเป๋าผ้าสกรีน<small>Custom Print Tote Bag</small></div></div>
       </div>
-      <div class="portfolio-item fade-up" data-cat="bag" data-caption="กระเป๋าผ้า — จัดแสดง" data-sub="Tote Bag Display">
-        <img src="images/portfolio-bags-display.jpg" alt="กระเป๋าผ้าจัดแสดง" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-caption">กระเป๋าผ้า Display<small>Tote Bag Collection</small></div></div>
+      <div class="portfolio-item fade-up" data-cat="bag" data-caption="กระเป๋าผ้า Photoroom" data-sub="Tote Bag Display">
+        <img src="images/bag-photoroom-1.jpg" alt="กระเป๋าผ้า Display" loading="lazy" style="object-fit:contain;background:#f5f5f5">
+        <div class="portfolio-overlay"><div class="portfolio-caption">กระเป๋าผ้า Collection<small>Tote Bag Display</small></div></div>
       </div>
-      <div class="portfolio-item fade-up" data-cat="other" data-caption="แผ่นรองเม้าส์ลายไทย" data-sub="Thai Pattern Mousepad">
-        <img src="images/mousepad-elephant-thai.jpg" alt="แผ่นรองเม้าส์" loading="lazy">
+      <div class="portfolio-item fade-up" data-cat="other" data-caption="แผ่นรองเม้าส์ ลาย Bangkok" data-sub="Bangkok Mousepad">
+        <img src="images/mousepad-bangkok.jpg" alt="แผ่นรองเม้าส์ Bangkok" loading="lazy" style="object-fit:contain;background:#f5f5f5">
         <div class="portfolio-overlay"><div class="portfolio-caption">แผ่นรองเม้าส์<small>Custom Mousepad</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="other" data-caption="แผ่นรองแก้ว ลาย Thailand" data-sub="Thailand Coaster">
+        <img src="images/coaster-thailand.jpg" alt="แผ่นรองแก้ว Thailand" loading="lazy" style="object-fit:contain;background:#f5f5f5">
+        <div class="portfolio-overlay"><div class="portfolio-caption">แผ่นรองแก้ว Thailand<small>Custom Coaster</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="other" data-caption="แม่เหล็กตู้เย็น ลายยันต์ไทย" data-sub="Thai Yantra Fridge Magnet">
+        <img src="images/magnet-yantra.jpg" alt="แม่เหล็กลายยันต์" loading="lazy" style="object-fit:contain;background:#111">
+        <div class="portfolio-overlay"><div class="portfolio-caption">แม่เหล็กลายยันต์<small>Thai Yantra Magnet</small></div></div>
+      </div>
+      <div class="portfolio-item fade-up" data-cat="other" data-caption="เสื้อเด็กสกรีน ลายสวย" data-sub="Kids Sublimation T-Shirt">
+        <img src="images/kids-shirt-1.jpg" alt="เสื้อเด็กสกรีน" loading="lazy" style="object-fit:contain;background:#f5f5f5">
+        <div class="portfolio-overlay"><div class="portfolio-caption">เสื้อเด็กสกรีน<small>Kids Sublimation Shirt</small></div></div>
       </div>
     </div>
   </div>
@@ -1068,10 +1087,20 @@
 
   // SCROLL ANIMATIONS
   const fadeEls = document.querySelectorAll('.fade-up');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.12 });
-  fadeEls.forEach(el => observer.observe(el));
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    fadeEls.forEach(el => obs.observe(el));
+  } else {
+    fadeEls.forEach(el => el.classList.add('visible'));
+  }
+  window.addEventListener('load', () => {
+    fadeEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) el.classList.add('visible');
+    });
+  });
 
   // PORTFOLIO FILTER
   document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -1112,9 +1141,9 @@
     const num = document.getElementById('bankNum').textContent;
     navigator.clipboard.writeText(num).then(() => {
       const btn = document.querySelector('.btn-copy');
-      btn.textContent = '✅ คัดลอกแล้ว!';
-      setTimeout(() => { btn.textContent = '📋 คัดลอก'; }, 2000);
-    });
+      btn.textContent = '\u2705 คัดลอกแล้ว!';
+      setTimeout(() => { btn.textContent = '\ud83d\udccb คัดลอก'; }, 2000);
+    }).catch(() => {});
   }
 
   // CONTACT FORM → LINE
@@ -1126,7 +1155,7 @@
     const product = f.product.value;
     const qty = f.qty.value;
     const msg = f.message.value;
-    const text = `สวัสดีครับ ต้องการสอบถามสินค้า Miniสกรีน\nชื่อ: ${name}\nเบอร์: ${phone}\nสินค้า: ${product || '-'}\nจำนวน: ${qty || '-'} ชิ้น\nข้อความ: ${msg || '-'}`;
+    const text = 'สวัสดีครับ ต้องการสอบถามสินค้า Miniสกรีน\nชื่อ: ' + name + '\nเบอร์: ' + phone + '\nสินค้า: ' + (product||'-') + '\nจำนวน: ' + (qty||'-') + ' ชิ้น\nข้อความ: ' + (msg||'-');
     window.open('https://line.me/R/oaMessage/%40388omvfa?' + encodeURIComponent(text), '_blank');
   }
 
@@ -1136,7 +1165,7 @@
     let current = '';
     sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
     document.querySelectorAll('.nav-menu a').forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+      a.style.color = a.getAttribute('href') === '#' + current ? '#C4991F' : '';
     });
   }, { passive: true });
 </script>
